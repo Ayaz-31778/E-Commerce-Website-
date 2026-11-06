@@ -1,112 +1,165 @@
-# E-Shop — React + Vite Edition
+# E-Shop | E-Commerce Website
 
-This version adds React and Vite while retaining the original E-Shop pages, CSS, JavaScript logic, Local Storage keys, and user/admin workflows.
+A responsive, frontend e-commerce demonstration project with separate customer and admin areas. The project is built with **React and Vite** while retaining the original HTML pages, CSS, JavaScript workflows, and browser Local Storage approach.
 
-## 1. Requirements
+> **Project status:** Deployed to Vercel. Add the final public deployment URL below once you copy it from your Vercel project dashboard.
 
-- Install Node.js (LTS): https://nodejs.org/
-- Install Visual Studio Code.
-- Extract this project ZIP to a folder on your computer.
+## Live Demo
 
-## 2. Open the project
+- **Live website:** [Add your Vercel deployment URL here]
+- **GitHub repository:** https://github.com/Ayaz-31778/E-Commerce-Website-
 
-1. Open VS Code.
-2. Select **File → Open Folder**.
-3. Select the extracted `admin` project folder (the folder containing `package.json`).
-4. Open **Terminal → New Terminal**.
+## Overview
 
-## 3. Install dependencies
+E-Shop demonstrates a basic online shopping workflow, including customer account pages, product browsing, cart and checkout pages, order history, and administration pages.
 
-Run this command once:
+The React entry point is provided through Vite. Existing page-specific HTML/CSS/JavaScript is retained and continues to handle the original workflows; this is not a full rewrite of every screen into React components.
+
+## Features
+
+### Customer area
+- Home page and account entry points
+- Signup and login pages
+- Product browsing
+- Shopping cart and checkout pages
+- Order history and profile pages
+
+### Admin area
+- Admin dashboard
+- Product management pages
+- User and order management pages
+
+### Application
+- React application entry point
+- Vite development server and production build
+- Existing CSS and JavaScript retained
+- Browser Local Storage for demo data
+- Separate customer and admin page areas
+
+> Feature availability depends on the original page scripts and browser data. Test each workflow in the deployed build before presenting it.
+
+## Tech Stack
+
+| Technology | Purpose |
+|---|---|
+| React | Application entry point |
+| Vite | Development server and build tool |
+| HTML5 | Page structure |
+| CSS3 | Styling and layout |
+| JavaScript | Existing application interactions |
+| Local Storage | Browser-side demo data |
+| Git & GitHub | Version control and source hosting |
+| Vercel | Production deployment |
+
+## Getting Started
+
+### Prerequisites
+
+Install:
+- [Node.js (LTS)](https://nodejs.org/)
+- [Visual Studio Code](https://code.visualstudio.com/)
+- Git
+
+### 1. Clone the repository
+
+```bash
+git clone https://github.com/Ayaz-31778/E-Commerce-Website-.git
+cd E-Commerce-Website-
+```
+
+### 2. Install dependencies
 
 ```bash
 npm install
 ```
 
-Wait until installation finishes.
-
-## 4. Run the project locally
-
-Run:
+### 3. Start the development server
 
 ```bash
 npm run dev
 ```
 
-Vite will show a local address, usually `http://localhost:5173/`.
-Open that address in your browser. Use the app's existing navigation to move between pages.
+Open the local URL printed in the terminal (usually `http://localhost:5173`).
 
-## 5. Test the production build
-
-Run:
+### 4. Create a production build
 
 ```bash
 npm run build
 ```
 
-If successful, Vite creates the production-ready `dist` folder.
+Vite creates the production output in the `dist/` directory.
 
-To preview that build locally:
+### 5. Preview the production build locally
 
 ```bash
 npm run preview
 ```
 
-## 6. Deploy on Vercel
+## Deployment
 
-1. Push the complete project to a GitHub repository. Include `package.json`, `vite.config.js`, `index.html`, `src`, and `public`.
-2. Sign in to Vercel and choose **Add New → Project**.
-3. Import the GitHub repository.
-4. Use these settings:
-   - Framework Preset: **Vite**
-   - Build Command: `npm run build`
-   - Output Directory: `dist`
-   - Install Command: `npm install`
-5. Select **Deploy**.
-6. Open the generated deployment URL and test the home, signup, login, user and admin pages.
+This repository is configured for a Vite deployment on Vercel.
 
-## 7. Deploy on Netlify (alternative)
+1. Import this GitHub repository into Vercel.
+2. Select **Vite** as the framework preset.
+3. Set the root directory to the repository root (`./`).
+4. Use the following build settings:
 
-1. Push the project to GitHub.
-2. In Netlify, choose **Add new site → Import an existing project**.
-3. Select the repository.
-4. Set Build Command to `npm run build` and Publish Directory to `dist`.
-5. Deploy the site.
+| Vercel setting | Value |
+|---|---|
+| Install command | `npm install` |
+| Build command | `npm run build` |
+| Output directory | `dist` |
 
-## Existing admin login
+5. Deploy and test the generated website URL.
 
-- Email: `admin@eshop.com`
-- Password: `admin123`
-
-## Project structure
+## Project Structure
 
 ```text
-admin/                 Original admin HTML pages
-user/                  Original user HTML pages
-css/style.css           Original stylesheet
-js/                     Original JavaScript files
-public/                 Files served by Vite
-  original/              Preserved original HTML pages
-    admin/
-    user/
-    index.html
-    login.html
-    signup.html
-  css/                   Original stylesheet
-  js/                    Original JavaScript files
-  _redirects             Netlify SPA fallback
-src/
-  main.jsx               React application entry point
-  styles.css             React helper styles
-index.html               Vite entry page
-package.json             Dependencies and commands
-vite.config.js            Vite configuration
-README.md                 Setup and deployment guide
+E-Commerce-Website-/
+├── admin/              # Original admin pages
+├── user/               # Original customer pages
+├── css/                # Original stylesheets
+├── js/                 # Original JavaScript files
+├── public/             # Static assets served by Vite
+├── src/
+│   ├── main.jsx        # React entry point
+│   └── styles.css      # React helper styles
+├── index.html          # Vite HTML entry
+├── login.html          # Login page
+├── signup.html         # Signup page
+├── package.json        # Dependencies and npm scripts
+├── package-lock.json   # Locked dependency versions
+├── vite.config.js      # Vite configuration
+├── vercel.json         # Vercel configuration
+├── .gitignore          # Ignored generated/local files
+└── README.md           # Project documentation
 ```
 
-## Important notes
+## Data and Security Notes
 
-- The original page files and CSS/JavaScript are preserved; their layouts and existing Local Storage functionality are not intentionally redesigned.
-- React is used as the application entry point and page host. The original page-specific JavaScript continues to power the existing features.
-- This is a frontend-only project. Data is stored in each visitor's browser Local Storage; it is not shared between users or devices.
-- For a real public e-commerce service, add a secure backend, database, authentication and payment integration before launch.
+- This is a **frontend demonstration project**. Data stored in Local Storage belongs to the current browser and is not shared across devices or users.
+- Local Storage is not a secure authentication system. Do not use this implementation to protect real customer accounts or sensitive information.
+- Do not store real passwords, payment details, API secrets, or other sensitive data in frontend code or Local Storage.
+- A production e-commerce service requires a secure backend, database, server-side authentication, authorization, input validation, and a trusted payment provider.
+- Clear browser Local Storage when you want to reset demo data.
+
+## Development Workflow
+
+After making changes:
+
+```bash
+git add .
+git commit -m "Describe your changes"
+git push origin main
+```
+
+If the GitHub repository is connected to Vercel, pushing to the production branch can trigger a new deployment automatically.
+
+## Author
+
+**Ayaz Dadavali**  
+GitHub: [@Ayaz-31778](https://github.com/Ayaz-31778)
+
+---
+
+If you find an issue, reproduce it in the local development environment and include the affected page and steps when reporting it.
