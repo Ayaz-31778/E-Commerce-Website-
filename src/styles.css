@@ -1,0 +1,13 @@
+/* Small React application styles. The original project design remains in css/style.css. */
+.app-loading,
+.app-error {
+  max-width: 720px;
+  margin: 80px auto;
+  padding: 24px;
+  text-align: center;
+}
+
+.app-error a {
+  display: inline-block;
+  margin-top: 12px;
+}

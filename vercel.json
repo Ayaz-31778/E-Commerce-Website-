@@ -1,0 +1,5 @@
+{
+  "rewrites": [
+    { "source": "/((?!css/|js/|original/|assets/).*)", "destination": "/index.html" }
+  ]
+}
